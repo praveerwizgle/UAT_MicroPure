@@ -84,39 +84,54 @@
                         <div class="col-8 d-flex justify-content-center">
                             <div class="video">
                                 <div class="buttons">
-                                    <div class="play" onclick="playVid()" id="play">
+                                    <div class="play" onclick="playVid()" id="play" style="display: none;">
                                         <i class="fa-solid fa-play"></i>
                                     </div>
-                                    <div class="pause" onclick="pauseVid()" id="pause">
+                                    <div class="pause" onclick="pauseVid()" id="pause" style="display: none;">
                                         <i class="fa-solid fa-pause"></i>
                                     </div>
                                 </div>
 
-                                <video id="myVideo">
-                                <source src="assests/mcompress.mp4" type="video/mp4">
-                                Your browser does not support HTML5 video.
-                              </video>
+                                <!-- Use an image element to display an image before the video loads -->
+                                <img src="assests/videoload.png" id="videoImage" style="width: auto;
+                                margin: 0 auto;
+                                border-radius: 20px;
+                                height: 200px;">
+
+                                <video id="myVideo" style="display: none;" playsinline>
+                                    <source src="assests/mcompress.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+
                                 <script>
                                     let vid = document.getElementById("myVideo");
-                                    let play = document.getElementById("play");
-                                    let pause = document.getElementById("pause");
-                                    pause.style.display = "none";
+                                    let playBtn = document.getElementById("play");
+                                    let pauseBtn = document.getElementById("pause");
+                                    let videoImage = document.getElementById("videoImage");
+
+                                    // Show the video and hide the image once the video is loaded and can be played
+                                    vid.onloadeddata = function() {
+                                        videoImage.style.display = "none";
+                                        vid.style.display = "block";
+                                        playBtn.style.display = "flex";
+                                    };
 
                                     function playVid() {
                                         vid.play();
-                                        pause.style.display = "flex";
-                                        play.style.display = "none";
+                                        pauseBtn.style.display = "flex";
+                                        playBtn.style.display = "none";
                                     }
 
                                     function pauseVid() {
                                         vid.pause();
-                                        play.style.display = "flex";
-                                        pause.style.display = "none";
+                                        playBtn.style.display = "flex";
+                                        pauseBtn.style.display = "none";
                                     }
                                 </script>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
