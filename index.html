@@ -80,9 +80,9 @@
                             <h5 class="mt-4 pr-0 pr-lg-5">
                                 Brining innovation and reliability to the production of liquid injection and pre-filled syringes, we are dedicated to providing our client with high-quality products and unparalleled customer service
                             </h5>
-                            <button class="btn btn-primary mt-5 py-3 px-4">
+                            <a class="btn btn-primary mt-5 py-3 px-4" style="width: 230px;">
                                 Contact Us
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -92,93 +92,8 @@
 
     <div class="container mt-5">
         <div class="row client-scroller">
-            <div class="col-12">
-                <!-- <div class="swiper cSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/Alkem_Laboratories_logo.png">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/cadila_pharmaceuticals_logo.png.webp">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/Caplin point.png">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/coral_logo.png">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/Ipca_Labs_logo.svg.png">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/Mapra.jpg">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/Mihika Pharma Logo.png">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/MVC.png">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/Reannon logo.png">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/RPGLIFE.NS_BIG-348b34b3.png">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div>
-                                <img src="assests/clientLogo/Wockhardt-new-logo-big.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div> -->
-                <!-- <script>
-                    var swiper = new Swiper(".cSwiper", {
-                        spaceBetween: 1,
-                        slidesPerView: 4,
-                        breakpoints: {
-                            320: {
-                                slidesPerView: 1,
-                                spaceBetween: 60
-                            },
-                            480: {
-                                slidesPerView: 4,
-                                spaceBetween: 90
-                            },
-                        },
-                        autoplay: {
-                            delay: 500,
-                        },
-                        navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                        },
-                    });
-                </script> -->
-
-                <marquee behavior="scroll" direction="left" onmousedown="this.stop();" onmouseup="this.start();" scrollamount="15">
+            <div class="col-12" style="overflow: hidden;">
+                <div class="scroll-container train">
                     <img src="assests/clientLogo/Alkem_Laboratories_logo.png">
                     <img src="assests/clientLogo/cadila_pharmaceuticals_logo.png.webp">
                     <img src="assests/clientLogo/Caplin point.png">
@@ -190,12 +105,50 @@
                     <img src="assests/clientLogo/Reannon logo.png">
                     <img src="assests/clientLogo/RPGLIFE.NS_BIG-348b34b3.png">
                     <img src="assests/clientLogo/Wockhardt-new-logo-big.jpg">
-                </marquee>
-
-                <div class="m-grad">
-
                 </div>
+
+                <style>
+                    .scroll-container {
+                        width: 100%;
+                        height: 100px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                    
+                    .scroll-container img {
+                        display: inline-block;
+                        height: 100%;
+                        vertical-align: middle;
+                        margin-right: 20px;
+                    }
+                    
+                    @keyframes scroll-left {
+                        0% {
+                            transform: translateX(100%);
+                        }
+                        100% {
+                            transform: translateX(-100%);
+                        }
+                    }
+                </style>
+
+                <script type="text/javascript">
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        const container = document.querySelector('.scroll-container');
+                        const images = container.querySelectorAll('img');
+
+                        let totalWidth = 0;
+
+                        images.forEach(img => {
+                            totalWidth += img.offsetWidth + parseInt(getComputedStyle(img).marginRight);
+                        });
+
+                        const animationDuration = totalWidth / 200; // Adjust speed factor (50 pixels per second)
+                        container.style.animation = `scroll-left ${animationDuration}s linear infinite`;
+                    });
+                </script>
             </div>
+
         </div>
 
 
@@ -668,9 +621,9 @@
                     <p class="mt-3">
                         Partner with us for a seamless pharmaceutical contract manufacturing experience. Our dedicated team is always available to answer your questions and address your concerns.
                     </p>
-                    <button class="btn btn-primary mt-4 py-3 px-4">
-                        <a href="contact.html" style="color: #fff !important; text-decoration: none;">Contact Us</a>
-                    </button>
+                    <a class="btn btn-primary mt-4 py-3 px-4" href="contact.html" style="width: 230px;">
+                        Contact Us
+                    </a>
                 </div>
             </div>
             <div class="col-12 col-lg-7 mt-5 mt-lg-0">

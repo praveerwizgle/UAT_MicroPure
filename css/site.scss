@@ -8,7 +8,7 @@ body {
     margin-top: 150px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .sec-spacing1 {
         margin-top: 36px !important;
     }
@@ -89,7 +89,7 @@ body {
     }
 }
 
-@media(max-width: 576px) {
+@media(max-width: 768px) {
     .navbar {
         .navbar-toggler {
             border: none;
@@ -173,7 +173,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .footer {
         .logo {
             display: flex;
@@ -256,7 +256,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .hero-banner {
         overflow-x: hidden !important;
         .img-container {
@@ -329,6 +329,14 @@ body {
         opacity: 0;
     }
     marquee {
+        position: relative;
+        img {
+            max-height: 80px;
+            width: auto;
+            margin-right: 50px;
+        }
+    }
+    .train {
         position: relative;
         img {
             max-height: 80px;
@@ -426,7 +434,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .expertise {
         .left {
             h5 {
@@ -498,7 +506,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .quality {
         img {
             width: 40px;
@@ -564,7 +572,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .discover {
         .columns {
             overflow: auto;
@@ -654,7 +662,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .connect-with {
         .sec-heading {
             text-align: left;
@@ -785,7 +793,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .hero-about {
         min-height: 992px;
         .title {
@@ -849,7 +857,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .mission .card {
         border-left: 9px solid #1472ba;
         img {
@@ -920,7 +928,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .earth {
         .globe {
             display: none;
@@ -973,7 +981,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .team {
         .item {
             img {
@@ -1064,7 +1072,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .hero-infra {
         min-height: 640px !important;
         margin-top: -120px;
@@ -1212,7 +1220,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .area {
         h5 {
             font-size: 22px;
@@ -1353,7 +1361,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .inhouse {
         .container {
             margin-top: 120px !important;
@@ -1557,7 +1565,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .prod-head {
         .btn {
             height: 50px;
@@ -1740,6 +1748,7 @@ body {
         }
     }
     .tab-head {
+        overflow-y: hidden;
         .v2 {
             &::before {
                 left: -2%;
@@ -1751,13 +1760,15 @@ body {
             }
         }
     }
-    .tab-content .category.sticky {
-        left: 11px;
+    .tab-content {
+        .category.sticky {
+            left: 11px;
+        }
     }
 }
 
 // General Responsive
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
     .tab-head-parent {
         padding: 0 !important;
         &.sticky {
@@ -1767,7 +1778,7 @@ body {
         }
     }
     .tab-head {
-        overflow-x: scroll;
+        overflow-x: auto;
         white-space: nowrap;
         border-radius: 0 !important;
         height: 70px;
@@ -1819,11 +1830,19 @@ body {
             font-size: 16px;
             line-height: 24px;
         }
+        .category {
+            padding-left: 0 !important;
+        }
+        .category.sticky {
+            left: 11px;
+            padding-left: 0px;
+            min-width: 180px;
+        }
     }
 }
 
 // General Responsive
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .sec-heading {
         h3 {
             font-size: 22px;
@@ -1884,7 +1903,7 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .awards {
         // .columns {
         //     overflow: auto;

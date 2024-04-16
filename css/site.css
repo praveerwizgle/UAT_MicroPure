@@ -7,7 +7,7 @@ body {
   margin-top: 150px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .sec-spacing1 {
     margin-top: 36px !important;
   }
@@ -88,7 +88,7 @@ body {
   color: #77C7FF !important;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .navbar .navbar-toggler {
     border: none;
     padding-right: 0 !important;
@@ -185,7 +185,7 @@ body {
           align-items: center;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .footer .logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -282,7 +282,7 @@ body {
   border-color: #77c7ff !important;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .hero-banner {
     overflow-x: hidden !important;
   }
@@ -363,6 +363,14 @@ body {
   position: relative;
 }
 .client-scroller marquee img {
+  max-height: 80px;
+  width: auto;
+  margin-right: 50px;
+}
+.client-scroller .train {
+  position: relative;
+}
+.client-scroller .train img {
   max-height: 80px;
   width: auto;
   margin-right: 50px;
@@ -462,7 +470,7 @@ body {
   bottom: -1px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .expertise .left h5 {
     font-size: 22px;
     line-height: 33px;
@@ -523,7 +531,7 @@ body {
   padding: 0 20px 0 20px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .quality img {
     width: 40px;
     margin: 0 0 20px 0;
@@ -585,7 +593,7 @@ body {
   margin: 10px 0 10px 0;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .discover .columns {
     overflow: auto;
   }
@@ -672,7 +680,7 @@ body {
   text-decoration: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .connect-with .sec-heading {
     text-align: left;
   }
@@ -805,7 +813,7 @@ body {
     bottom: -3px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .hero-about {
     min-height: 992px;
   }
@@ -865,7 +873,7 @@ body {
   color: #616163;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .mission .card {
     border-left: 9px solid #1472ba;
   }
@@ -938,7 +946,7 @@ body {
   font-weight: 700 !important;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .earth .globe {
     display: none;
   }
@@ -989,7 +997,7 @@ body {
   color: #616163;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .team .item img {
     max-width: 150px !important;
   }
@@ -1087,7 +1095,7 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .hero-infra {
     min-height: 640px !important;
     margin-top: -120px;
@@ -1247,7 +1255,7 @@ body {
   display: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .area h5 {
     font-size: 22px;
     line-height: 33px;
@@ -1392,7 +1400,7 @@ body {
     height: 450px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .inhouse .container {
     margin-top: 120px !important;
   }
@@ -1601,7 +1609,7 @@ body {
   max-width: 100%;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .prod-head .btn {
     height: 50px;
     min-width: 160px;
@@ -1786,6 +1794,9 @@ body {
     max-width: 95%;
     z-index: 1040;
   }
+  .tab-head {
+    overflow-y: hidden;
+  }
   .tab-head .v2::before {
     left: -2%;
     top: 30px;
@@ -1798,7 +1809,7 @@ body {
     left: 11px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
   .tab-head-parent {
     padding: 0 !important;
   }
@@ -1808,7 +1819,7 @@ body {
     max-width: 100%;
   }
   .tab-head {
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
     border-radius: 0 !important;
     height: 70px;
@@ -1855,8 +1866,16 @@ body {
     font-size: 16px;
     line-height: 24px;
   }
+  .tab-content .category {
+    padding-left: 0 !important;
+  }
+  .tab-content .category.sticky {
+    left: 11px;
+    padding-left: 0px;
+    min-width: 180px;
+  }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .sec-heading h3 {
     font-size: 22px;
     line-height: 33px;
@@ -1919,7 +1938,7 @@ body {
   margin: 10px 0 10px 0;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .awards .card {
     margin-bottom: 15px !important;
   }
