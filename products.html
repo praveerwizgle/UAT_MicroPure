@@ -22,6 +22,31 @@
 
 <body>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            debugger;
+            const activeTab = localStorage.getItem('activeTab');
+            if (activeTab == 'menu1') {
+                document.getElementById('tmenu2').classList.remove('active');
+                document.getElementById('tmenu1').classList.add('active');
+                document.getElementById('menu2').classList.remove('active', 'show');
+                document.getElementById('menu1').classList.add('active', 'show');
+
+                document.getElementById('tmenu1').scrollIntoView();
+
+            }
+            if (activeTab == 'menu2') {
+                document.getElementById('tmenu1').classList.remove('active');
+                document.getElementById('tmenu2').classList.add('active');
+                document.getElementById('menu1').classList.remove('active', 'show');
+                document.getElementById('menu2').classList.add('active', 'show');
+
+                document.getElementById('tmenu2').scrollIntoView();
+
+            }
+        });
+    </script>
+
     <nav class="navbar navbar-expand-lg navbar-light  bg-light p-3 change  d-xl-block">
         <div class="container p-0">
             <a class="navbar-brand" href="index.html">
@@ -91,8 +116,8 @@
                     </div>
                     <div class="v2 px-4">
                         <ul class="nav nav-tabs" id="tabHead">
-                            <li class="active"><a data-toggle="tab" href="#menu1">Liquid injectables</a></li>
-                            <li><a data-toggle="tab" href="#menu2">Pre-filled syringes</a></li>
+                            <li class="active" id="tmenu1"><a data-toggle="tab" href="#menu1">Liquid injectables</a></li>
+                            <li id="tmenu2"><a data-toggle="tab" href="#menu2">Pre-filled syringes</a></li>
                             <li><a data-toggle="tab" href="#menu3">Upcoming releases</a></li>
                         </ul>
                     </div>

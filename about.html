@@ -324,6 +324,7 @@
 
 
     </div>
+
     <div class="container sec-spacing1 connect-with ">
         <div class="row">
             <div class="col-12 col-lg-5 mt-4">
@@ -355,7 +356,7 @@
                                 <p>
                                     Discover our wide range of high-quality injectables, manufactured with precision and attention to detail.
                                 </p>
-                                <a href="">Explore >></a>
+                                <a href="javascript:void(0)" onclick="openProductPage('menu1')">Explore >></a>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6 mb-4 pr-0">
@@ -367,17 +368,25 @@
                                 <p>
                                     As a fast growing unit dose option, pre-filled syringes enhance healthcare with convenience, safety and cost-effectiveness.
                                 </p>
-                                <a href="">Explore >></a>
+                                <a href="javascript:void(0)" onclick="openProductPage('menu2')">Explore >></a>
                             </div>
                         </div>
                     </div>
+                    <script>
+                        function openProductPage(activeTab) {
+                            // Store the active tab in localStorage
+                            localStorage.setItem('activeTab', activeTab);
+                            // Redirect to the product page
+                            window.location.href = 'products.html';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <div class="footersec-spacing1">
+    <div class="footer sec-spacing1">
         <div class="container py-3">
             <div class="row align-item-center justify-content-between">
                 <div class="col-12 col-md-6 logo">
@@ -394,6 +403,8 @@
             </div>
         </div>
     </div>
+
+
 
 
 

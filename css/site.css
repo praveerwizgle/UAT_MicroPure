@@ -738,7 +738,7 @@ body {
   z-index: -1;
   background-image: url(../assests/hero-about.png);
   background-size: cover;
-  min-height: 100vh;
+  min-height: 1024px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -800,7 +800,7 @@ body {
 
 @media (max-width: 1440px) {
   .hero-about {
-    min-height: 125vh;
+    min-height: 920px;
   }
   .hero-about .title h1 {
     max-width: 95%;
@@ -815,7 +815,7 @@ body {
 }
 @media (max-width: 768px) {
   .hero-about {
-    min-height: 992px;
+    min-height: 920px;
   }
   .hero-about .title h1 {
     max-width: 80%;
@@ -1255,7 +1255,7 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1064px) {
   .area h5 {
     font-size: 22px;
     line-height: 33px;
@@ -1398,6 +1398,11 @@ body {
 @media (max-width: 1440px) {
   .inhouse .labSwiper .swiper-slide img {
     height: 450px;
+  }
+}
+@media (max-width: 1024px) {
+  .inhouse .labSwiper .swiper-slide img {
+    height: 320px;
   }
 }
 @media (max-width: 768px) {
@@ -1967,6 +1972,22 @@ body {
   margin: 0 auto;
   border-radius: 20px;
   height: 500px;
+}
+.videov2 .play {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.videov2 .pause {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.videov2:hover .play {
+  opacity: 1;
+}
+.videov2:hover .pause {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

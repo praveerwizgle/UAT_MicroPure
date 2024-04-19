@@ -720,7 +720,7 @@ body {
     z-index: -1;
     background-image: url(../assests/hero-about.png);
     background-size: cover;
-    min-height: 100vh;
+    min-height: 1024px;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -777,7 +777,7 @@ body {
 
 @media (max-width: 1440px) {
     .hero-about {
-        min-height: 125vh;
+        min-height: 920px;
         .title {
             h1 {
                 max-width: 95%;
@@ -795,7 +795,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-about {
-        min-height: 992px;
+        min-height: 920px;
         .title {
             h1 {
                 max-width: 80%;
@@ -1220,7 +1220,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1064px) {
     .area {
         h5 {
             font-size: 22px;
@@ -1355,6 +1355,18 @@ body {
             .swiper-slide {
                 img {
                     height: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .inhouse {
+        .labSwiper {
+            .swiper-slide {
+                img {
+                    height: 320px;
                 }
             }
         }
@@ -1941,6 +1953,22 @@ body {
         margin: 0 auto;
         border-radius: 20px;
         height: 500px;
+    }
+    .play {
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    .pause {
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    &:hover {
+        .play {
+            opacity: 1;
+        }
+        .pause {
+            opacity: 1;
+        }
     }
 }
 

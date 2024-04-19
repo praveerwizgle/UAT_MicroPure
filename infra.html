@@ -195,7 +195,7 @@
 
                             </div>
                             <div class="swiper-slide">
-                                <img src="assests/iconsPics/Infra/Unit 1.png">
+                                <img src="assests/iconsPics/Infra/Unit 2.png">
 
                             </div>
                         </div>
@@ -393,6 +393,7 @@
                         spaceBetween: 30
                     },
 
+
                 },
                 autoplay: {
                     delay: 2000,
@@ -419,9 +420,9 @@
                     <p class="mt-3">
                         Partner with us for a seamless pharmaceutical contract manufacturing experience. Our dedicated team is always available to answer your questions and address your concerns.
                     </p>
-                    <a class="btn btn-primary mt-4 py-3 px-4" href="contact.html" style="width: 230px;">
-                        Contact Us
-                    </a>
+                    <button class="btn btn-primary mt-4 py-3 px-4">
+                        <a href="contact.html" style="color: #fff !important; text-decoration: none;">Contact Us</a>
+                    </button>
                 </div>
             </div>
             <div class="col-12 col-lg-7 mt-5 mt-lg-0">
@@ -440,7 +441,7 @@
                                 <p>
                                     Discover our wide range of high-quality injectables, manufactured with precision and attention to detail.
                                 </p>
-                                <a href="">Explore >></a>
+                                <a href="javascript:void(0)" onclick="openProductPage('menu1')">Explore >></a>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6 mb-4 pr-0">
@@ -452,10 +453,18 @@
                                 <p>
                                     As a fast growing unit dose option, pre-filled syringes enhance healthcare with convenience, safety and cost-effectiveness.
                                 </p>
-                                <a href="">Explore >></a>
+                                <a href="javascript:void(0)" onclick="openProductPage('menu2')">Explore >></a>
                             </div>
                         </div>
                     </div>
+                    <script>
+                        function openProductPage(activeTab) {
+                            // Store the active tab in localStorage
+                            localStorage.setItem('activeTab', activeTab);
+                            // Redirect to the product page
+                            window.location.href = 'products.html';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
