@@ -17,9 +17,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-    </script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async
+            defer></script> -->
+    <!-- <script
+            src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script> -->
 
     <!-- Form Validations -->
     <script>
@@ -34,7 +37,7 @@
                 document.forms.myForm.companyName.value;
             var Message =
                 document.forms.myForm.message.value;
-            var response = grecaptcha.getResponse();
+            // var response = grecaptcha.getResponse();
 
 
             //Javascript reGex for Email Validation.
@@ -74,18 +77,17 @@
                 return false;
             }
 
-            if (response.length == 0) {
-                //reCaptcha not verified
-                alert("please verify you are humann!");
-                evt.preventDefault();
-                return false;
-            }
+            // if (response.length == 0) {
+            //     //reCaptcha not verified
+            //     alert("please verify you are humann!");
+            //     evt.preventDefault();
+            //     return false;
+            // }
             //captcha verified 
 
             return true;
         }
     </script>
-
 
     <!-- <style>
 .error {
@@ -93,6 +95,11 @@ color: red;
 }
 </style> -->
     <title>MicroPure - Contact</title>
+    <style>
+        .text-danger {
+            margin-top: -0.85rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -103,7 +110,7 @@ color: red;
                 <img src="assests/micorpure_logo.svg" id="logo">
             </a>
             <button class="navbar-toggler" onclick="openMobilePanel()">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
             <div class="collapse navbar-collapse d-flex d-lg-flex  justify-content-between" id="navbarCollapse">
                 <ul class="navbar-nav">
@@ -111,8 +118,9 @@ color: red;
                 <ul class="navbar-nav">
                     <li class="panel-close d-lg-none" onclick="closeMobilePanel()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-                          </svg>
+                                <path
+                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                            </svg>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link mr-3" href="about.html">About</a>
@@ -149,59 +157,82 @@ color: red;
                     Just send us a message below and we’ll be in touch shortly
                 </p>
             </div>
+            <style>
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                }
+            </style>
             <div class="col-12 col-lg-5">
                 <div class="left">
-
-                    <form id="myForm" class="mt-5 " method="post">
-                        <div class="form-group">
-                            <label for="name">Name</label>
+                    <form id="myForm" class="mt-5" method="post">
+                        <div class="form-group mb-4">
+                            <label for="name">Name<span
+                                        class="text-danger">*</span></label>
                             <div>
                                 <i class="fa-light fa-user"></i>
-                                <input type="text" name="name" id="name" placeholder="Your Name" class="form-control">
-
+                                <input type="text" name="name" id="name" placeholder="Your Name" class="form-control  mb-3">
+                                <div id="nameError" class="text-danger"></div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="companyName">Company Name</label>
+
+                        <div class="form-group mb-4">
+                            <label for="companyName">Company Name<span
+                                        class="text-danger">*</span></label>
                             <div>
                                 <i class="fa-light fa-building"></i>
                                 <input type="text" name="companyName" id="companyName" placeholder="Your Company Name" class="form-control">
-                                <!-- <div  id="companyNameError"> </div> -->
+                                <div id="companyNameError" class="text-danger"></div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
+
+                        <div class="form-group mb-4">
+                            <label for="email">Email address<span
+                                        class="text-danger">*</span></label>
                             <div>
                                 <i class="fa-light fa-envelope"></i>
                                 <input type="email" name="email" id="email" placeholder="Your Email" class="form-control">
-                                <!-- <div id="emailError"> </div> -->
+                                <div id="emailError" class="text-danger"></div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="phoneNumber">Phone Number</label>
+
+                        <div class="form-group mb-4">
+                            <label for="phoneNumber">Phone Number<span
+                                        class="text-danger">*</span></label>
                             <div>
                                 <i class="fa-light fa-phone"></i>
                                 <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Your Mobile or Landline Number" class="form-control">
+                                <div id="phoneNumberError" class="text-danger"></div>
                             </div>
-                            <!-- <div id="phoneError">  </div> -->
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
+
+                        <div class="form-group mb-4">
+                            <label for="message">Message<span
+                                        class="text-danger">*</span></label>
                             <div>
                                 <i class="fa-light fa-pencil"></i>
                                 <textarea type="text" name="message" id="message" placeholder="Your Message" class="form-control" rows="4" style="height: unset;"></textarea>
+                                <div id="messageError" class="text-danger"></div>
                             </div>
-                            <!-- <div id="messageError"> </div> -->
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6LfnR-InAAAAADqFdwTXh0cQ2GtSYhCUXHcDwKLU"></div>
-                        <br/>
-
-                        <button type="submit" id="btn" class="btn btn-primary btn-xl mt-5" style="margin: 0 auto;">
-                           Submit <i class="fa-light fa-arrow-right"></i>
-                        </button>
-
-
+                        <!-- <div class="g-recaptcha"
+                                data-sitekey="6LfnR-InAAAAADqFdwTXh0cQ2GtSYhCUXHcDwKLU"></div>
+                            <br /> -->
+                        <button type="submit" id="btn" class="btn btn-primary btn-xl mt-5" disabled>Submit <i
+                                    class="fa-light fa-arrow-right"></i></button>
                     </form>
+                    <div class="mt-5" id="successMessage" style="display: none;">
+                        <div class="card dark p-4">
+                            <h6 class="text-success align-item-center"> Email sends successfully, our team get back to you!</h6>
+                        </div>
+                    </div>
+
+                    <div class="mt-5" id="errorMessage" style="display: none;">
+                        <!-- Show this div after form submission -->
+                        <div class="card dark p-4">
+                            <h6 class="text-danger align-item-center">Form failed!</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-lg-7">
@@ -237,16 +268,16 @@ color: red;
                             Email Us
                         </p>
                         <a href="mailto:team@micropure.in">
-                            team@micropure.in
-                        </a>
+                                team@micropure.in
+                            </a>
                     </div>
                     <div class="col-12 col-lg-6 mt-5 mt-lg-0">
                         <p>
                             Call Us
                         </p>
                         <a href="tel:+917304985830">
-                            +91 7304985830
-                        </a>
+                                +91 7304985830
+                            </a>
                     </div>
                 </div>
             </div>
@@ -272,15 +303,123 @@ color: red;
         </div>
     </div>
 
-
     <!-- Optional JavaScript -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     <script type="text/javascript">
         (function() {
-            emailjs.init("JmlYzVZ4JnEs-88Cm");
+            emailjs.init("QFMBGtWimGMc4GzpW");
         })();
     </script>
+
+
+    <script>
+        // Get all input fields
+        var nameInput = document.getElementById('name');
+        var companyNameInput = document.getElementById('companyName');
+        var emailInput = document.getElementById('email');
+        var phoneNumberInput = document.getElementById('phoneNumber');
+        var messageInput = document.getElementById('message');
+
+        // Get all error message elements
+        var nameError = document.getElementById('nameError');
+        var companyNameError = document.getElementById('companyNameError');
+        var emailError = document.getElementById('emailError');
+        var phoneNumberError = document.getElementById('phoneNumberError');
+        var messageError = document.getElementById('messageError');
+
+        function validateField(input, error) {
+            if (input.value.trim() === '') {
+                switch (input) {
+                    case nameInput:
+                        error.textContent = 'Name is required';
+                        break;
+                    case companyNameInput:
+                        error.textContent = 'Company name is required';
+                        break;
+                    case emailInput:
+                        error.textContent = 'Email address is required';
+                        break;
+                    case phoneNumberInput:
+                        error.textContent = 'Phone number is required';
+                        break;
+                    case messageInput:
+                        error.textContent = 'Message is required';
+                        break;
+                    default:
+                        error.textContent = 'This field is required';
+                        break;
+                }
+            } else {
+                if (input === emailInput && !validateEmail(input.value.trim())) {
+                    error.textContent = 'Invalid email address';
+                } else if (input === phoneNumberInput && !validatePhoneNumber(input.value.trim())) {
+                    error.textContent = 'Invalid phone number';
+                } else {
+                    error.textContent = '';
+                }
+            }
+
+            toggleSubmitButton();
+        }
+
+
+
+        // Validate email address
+        function validateEmail(email) {
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+
+        // Validate phone number
+        function validatePhoneNumber(phoneNumber) {
+            var phonePattern = /^[0-9]{10}$/;
+            return phonePattern.test(phoneNumber);
+        }
+
+        // Add blur event listeners to all input fields
+        nameInput.addEventListener('blur', function() {
+            validateField(nameInput, nameError);
+        });
+
+        companyNameInput.addEventListener('blur', function() {
+            validateField(companyNameInput, companyNameError);
+        });
+
+        emailInput.addEventListener('blur', function() {
+            validateField(emailInput, emailError);
+        });
+
+        phoneNumberInput.addEventListener('blur', function() {
+            validateField(phoneNumberInput, phoneNumberError);
+        });
+
+        messageInput.addEventListener('blur', function() {
+            validateField(messageInput, messageError);
+        });
+
+        // Function to enable/disable button based on form validity
+        function toggleSubmitButton() {
+            var submitBtn = document.getElementById('btn');
+            submitBtn.disabled = !!nameError.textContent || !!companyNameError.textContent || !!emailError.textContent || !!phoneNumberError.textContent || !!messageError.textContent;
+        }
+
+        // Add submit event listener to the form
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            // Validate all fields
+            validateField(nameInput, nameError);
+            validateField(companyNameInput, companyNameError);
+            validateField(emailInput, emailError);
+            validateField(phoneNumberInput, phoneNumberError);
+            validateField(messageInput, messageError);
+
+            // Prevent form submission if any field is invalid
+            if (nameError.textContent || companyNameError.textContent || emailError.textContent || phoneNumberError.textContent || messageError.textContent) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
 
     <script>
         // listen to the form submission
@@ -290,19 +429,27 @@ color: red;
                 event.preventDefault();
                 if (validateForm()) {
                     // validateRecaptcha();
-                    const serviceID = "service_bstlt2s";
-                    const templateID = "template_2n7flm9";
+                    const serviceID = "service_r8q1yza";
+                    const templateID = "template_c5tmj4t";
 
                     // send the email here
                     emailjs.sendForm(serviceID, templateID, this).then(
                         (response) => {
                             console.log("SUCCESS!", response.status, response.text);
-                            alert("SUCCESS!");
+                            // alert("SUCCESS!");
+                            // Hide the form
+                            document.getElementById("myForm").style.display = "none";
+                            // Show the response message
+                            document.getElementById("successMessage").style.display = "block";
                         },
 
                         (error) => {
                             console.log("FAILED...", error);
-                            alert("FAILED...", error);
+                            // alert("FAILED...", error);
+                            // Hide the form
+                            document.getElementById("myForm").style.display = "none";
+                            // Show the response message
+                            document.getElementById("errorMessage").style.display = "block";
                         }
 
                     );
@@ -316,8 +463,6 @@ color: red;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script src="main.js" crossorigin="anonymous"></script>
-
-
 
 </body>
 
