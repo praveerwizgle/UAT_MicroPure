@@ -24,7 +24,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            debugger;
             const activeTab = localStorage.getItem('activeTab');
             if (activeTab == 'menu1') {
                 document.getElementById('tmenu2').classList.remove('active');
@@ -111,7 +110,7 @@
         <div class="row">
             <div class="col-12 tab-head-parent">
                 <div class="tab-head p-3">
-                    <div class="v1 px-4 d-none d-lg-block">
+                    <div class="v1 px-4 ">
                         Product List
                     </div>
                     <div class="v2 px-4">
@@ -121,7 +120,7 @@
                             <li><a data-toggle="tab" href="#menu3">Upcoming releases</a></li>
                         </ul>
                     </div>
-                    <div class="v3 px-3 " id="downloadLink" style="cursor: pointer;">
+                    <div class="v3 px-4 " id="downloadLink" style="cursor: pointer;">
                         Download product list <i class="fa-sharp fa-regular fa-download"></i>
                     </div>
                     <script>
@@ -677,7 +676,7 @@
 
 
                     </div>
-                    <div id="menu3" class="tab-pane fade">
+                    <div id="menu3" class="tab-pane fade" style="min-height: 300px;">
                         <p>We will update you once as soon as possible.</p>
                     </div>
 
