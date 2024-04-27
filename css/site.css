@@ -1761,7 +1761,7 @@ body {
   max-width: 80%;
   z-index: 1040;
   min-width: 245px;
-  padding-left: 80px;
+  padding-left: 60px;
   max-width: 245px;
 }
 .tab-content .item-table h6 {
@@ -1790,7 +1790,7 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1560px) {
   .tab-head-parent.sticky {
     background-color: #fff;
     position: fixed;
