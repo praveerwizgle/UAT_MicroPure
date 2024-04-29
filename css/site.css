@@ -1615,10 +1615,17 @@ body {
 }
 
 @media (max-width: 768px) {
+  .prod-head h3 {
+    text-align: center;
+  }
+  .prod-head p {
+    text-align: center;
+  }
   .prod-head .btn {
     height: 50px;
     min-width: 160px;
     font-size: 16px !important;
+    margin: 0 auto;
   }
 }
 .tab-head-parent.sticky {
