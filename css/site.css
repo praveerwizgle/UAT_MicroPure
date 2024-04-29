@@ -2112,9 +2112,6 @@ body {
 
 @media (max-width: 768px) {
   .placeholder {
-    width: auto;
-    margin: 0 auto;
-    border-radius: 20px;
-    height: 200px;
+    height: 200px !important;
   }
 }
