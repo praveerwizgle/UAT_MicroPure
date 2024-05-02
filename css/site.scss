@@ -1040,8 +1040,8 @@ body {
     }
     .video {
         video {
-            height: 500px;
-            width: auto;
+            height: auto;
+            width: 100%;
             margin: 0 auto;
             border-radius: 20px;
         }
@@ -1092,9 +1092,9 @@ body {
             }
         }
         .video {
-            video {
-                height: 200px;
-            }
+            // video {
+            //     height: 200px;
+            // }
             .buttons {
                 div {
                     height: 60px;
@@ -2096,11 +2096,35 @@ body {
 }
 
 .videov2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .placeholder {
         width: auto;
         margin: 0 auto;
         border-radius: 20px;
         height: 500px;
+    }
+    .placeholder-loader {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 500px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: #000;
+        img {
+            max-width: 250px;
+        }
     }
     .play {
         opacity: 0;
@@ -2120,8 +2144,56 @@ body {
     }
 }
 
+@media (max-width: 1366px) {
+    .videov2 .placeholder-loader {
+        height: 500px;
+        img {
+            max-width: 150px !important;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .videov2 .placeholder-loader {
+        height: 410px;
+        img {
+            max-width: 150px !important;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .videov2 .placeholder-loader {
+        height: 343px;
+        img {
+            max-width: 150px !important;
+        }
+    }
+}
+
 @media (max-width: 768px) {
-    .placeholder {
-        height: 200px !important;
+    .videov2 .placeholder-loader {
+        height: 320px;
+        img {
+            max-width: 150px !important;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .videov2 .placeholder-loader {
+        height: 253px;
+        img {
+            max-width: 150px !important;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .videov2 .placeholder-loader {
+        height: 185px;
+        img {
+            max-width: 100px !important;
+        }
     }
 }

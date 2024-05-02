@@ -81,8 +81,8 @@
                         Explore our state-of-the-art facilities and advanced technologies that power our liquid injectable and pre-filled syringe production.
                     </h5>
                     <div class="row justify-content-center mt-5 pt-3">
-                        <div class="col-8 d-flex justify-content-center">
-                            <div class="video videov2">
+                        <div class="col-12 col-md-10 col-lg-8 d-flex justify-content-center">
+                            <div class="video videov2 mb-3">
                                 <div class="buttons">
                                     <div class="play" onclick="playVid()" id="play" style="display: none;">
                                         <i class="fa-solid fa-play"></i>
@@ -93,7 +93,11 @@
                                 </div>
 
                                 <!-- Use an image element to display an image before the video loads -->
-                                <img src="assests/videoload.png" id="videoImage" style="" class="placeholder">
+                                <!-- <img src="assests/videoload.png" style="" class="placeholder"> -->
+                                <!-- videoImage -->
+                                <div class="placeholder-loader" id="videoImage">
+                                    <img src="assests/carregamento.gif">
+                                </div>
 
                                 <video id="myVideo" style="display: none;" playsinline>
                                     <source src="assests/mcompress.mp4" type="video/mp4">
@@ -183,8 +187,6 @@
                     Manufacturing capacity for PFS per annum
                 </p>
             </div>
-
-
             <div class="col-12 image-box mt-3 ">
                 <div class="image">
 
